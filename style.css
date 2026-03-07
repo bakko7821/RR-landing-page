@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
   --bg-color: #ffffff;
@@ -154,8 +154,6 @@ body::-webkit-scrollbar-thumb {
   left: 0;
   top: 0;
   width: 100%;
-  max-width: 100%;
-  max-height: 100vh;
   overflow: hidden;
 }
 
@@ -446,6 +444,7 @@ main section#services ul.cardbox {
 }
 
 main section#services ul.cardbox li article {
+  cursor: pointer;
   border-top: 8px var(--accent-color) solid;
   background-color: var(--bg-color);
   height: 100%;
@@ -500,4 +499,20 @@ main section#services ul.cardbox li article button img {
 
 main section#services ul.cardbox li article button:hover img {
   transform: rotate(45deg);
+}
+
+footer {
+  gap: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer p {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--secondary-text-color);
 }
