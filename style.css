@@ -1,10 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
   --bg-color: #ffffff;
   --text-color: #121212;
   --secondary-text-color: #475569;
   --accent-color: #5380ea;
+  --accent2-color: #e54a2a;
 }
 
 /* Reset and base styles  */
@@ -133,6 +134,18 @@ body {
   flex-direction: column;
   align-items: center;
   position: relative;
+  background-color: #ebf0ff;
+}
+
+body::-webkit-scrollbar {
+  width: 4px;
+}
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--accent-color);
+  border-radius: 20px;
 }
 
 .bg-image {
@@ -146,6 +159,7 @@ body {
 }
 
 header {
+  backdrop-filter: blur(2px);
   position: fixed;
   top: 0;
   left: 0;
@@ -198,7 +212,7 @@ main section#hero {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* min-height: 100vh; */
+  padding: 76px;
   padding-top: 150px;
   gap: 20px;
 }
@@ -256,7 +270,8 @@ main section#hero .mouse-icon {
   margin-top: 76px;
 }
 
-main section#hero button {
+main section#hero button,
+main section#interest-us .content button {
   font-size: 0.875rem;
   line-height: 1.35;
   font-weight: 700;
@@ -265,4 +280,100 @@ main section#hero button {
   padding: 12px 24px;
   border-radius: 8px;
   z-index: 3;
+}
+
+main section#interest-us {
+  padding: 88px;
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 65px;
+}
+
+main section#interest-us .head-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  width: 80%;
+}
+
+main section#interest-us .head-content .head-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.375rem;
+  color: var(--accent-color);
+  font-weight: 700;
+  width: 20%;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+main section#interest-us .head-content h2 {
+  width: 75%;
+  color: var(--text-color);
+  font-family: "Nunito", sans-serif;
+  font-size: 2.25rem;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 900;
+}
+
+main section#interest-us .head-content h2 span {
+  font-family: "Nunito", sans-serif;
+  color: var(--accent2-color);
+}
+
+main section#interest-us .head-content .description-text {
+  font-family: Arial, Helvetica, sans-serif;
+  clip: var(--secondary-text-color);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: center;
+  text-transform: capitalize;
+  width: 96%;
+}
+
+main section#interest-us .content {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 80%;
+}
+
+main section#interest-us .content .text-box {
+  position: relative;
+}
+
+main section#interest-us .content button {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+main section#interest-us .cardbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 200px;
+}
+
+main section#interest-us .cardbox article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+main section#interest-us .cardbox article .textbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
